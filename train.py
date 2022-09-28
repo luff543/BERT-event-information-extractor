@@ -658,9 +658,6 @@ if __name__ == "__main__":
     # limit GPU memory
     gpu_options = tf.compat.v1.GPUOptions(per_process_gpu_memory_fraction=1.0)
     gpu_options.allow_growth = True
-    # tf_config = tf.ConfigProto(allow_soft_placement=True, intra_op_parallelism_threads=14,
-    #                            inter_op_parallelism_threads=14,
-    #                            device_count={'CPU': 14}, gpu_options=gpu_options)
     tf_config = tf.ConfigProto(gpu_options=gpu_options)
 
     vocab_file = bert_workspace + "vocab.txt"

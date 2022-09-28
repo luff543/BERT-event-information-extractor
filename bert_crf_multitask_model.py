@@ -240,14 +240,6 @@ class CRFModel(object):
             result_sequence_scores.append(viterbi_score)
         return result_sequences, result_sequence_scores
 
-    # def evaluate(self,
-    #              sess,
-    #              evaluate_input_ids,
-    #              evaluate_input_mask,
-    #              evaluate_segment_ids,
-    #              evaluate_label_ids, evaluate_bieos_scheme_ids, evaluate_type_ids,
-    #              label_id_to_tag, bieos_scheme_label_id_to_tag, type_label_id_to_tag,
-    #              batch_size):
     def evaluate(self,
                  sess,
                  input_ids,
